@@ -7,7 +7,17 @@ body {
   color: white;
 }
 
-.home {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+#main .MuiContainer-root {
   width: 100% !important;
   height: 100vh;
   display: flex !important;
@@ -16,7 +26,181 @@ body {
   justify-content: center;
 }
 
+/* Utilities */
+
+.loading {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  top: -50px;
+}
+
+.loading .process {
+  margin: 0 0 20px 0;
+  font-size: 3rem;
+}
+
+.loading .MuiCircularProgress-root {
+  width: 65px !important;
+  height: 65px !important;
+}
+
+/* Home */
+
+.home {
+  position: relative;
+  top: -50px;
+}
+
 .home .logo {
   max-width: 200px;
-  transform: translateX(10%);
+  margin-bottom: 20px;
+  transform: translate(20px, 0px) rotate(0deg);
+  transition: all 0.5s ease;
+}
+
+.home .title {
+  font-size: 3em;
+}
+
+.home .logo.clean {
+  transform: translate(-30px, -10px) rotate(-10deg);
+}
+
+.home .logo.dirty {
+  transform: translate(70px, -10px) rotate(10deg);
+}
+
+.home .modes {
+  margin-top: 20px;
+}
+
+.home .modes .MuiButton-root {
+  font-size: 24px !important;
+  margin: 0 10px !important;
+  padding: 10px 50px !important;
+  font-weight: normal;
+}
+
+.home .modes .MuiButton-root.clean {
+  transform: translate(-30px, 10px) rotate(5deg);
+}
+
+.home .modes .MuiButton-root.dirty {
+  transform: translate(30px, 10px) rotate(-5deg);
+}
+
+/* Game */
+
+.game .company {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+}
+
+.game .company .logo {
+  width: 50px;
+  transform: rotate(-10deg);
+}
+
+.game .company .title {
+  margin: 0 0 0 10px;
+  font-size: 30px;
+}
+
+.game .home-arrow {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  transform: rotate(180deg);
+}
+
+.game .home-arrow .MuiSvgIcon-root {
+  width: 2em !important;
+  height: 2em !important;
+}
+
+.game .settings {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  color: white;
+}
+
+.game .settings .MuiSvgIcon-root {
+  width: 1.5em !important;
+  height: 1.5em !important;
+}
+
+.game .card {
+  text-align: center;
+  width: 90vw;
+  max-width: 1000px;
+  height: 50vh;
+}
+
+.game .card .content {
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game .card .content .question {
+  font-weight: normal;
+  font-size: clamp(2rem, 5vw, 3rem);
+  padding: 20px 40px 0px 40px;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .game .card .content .question {
+    padding: 20px 20px 0px 20px;
+  }
+}
+
+.game .card .content .fetching {
+  margin-top: auto;
+}
+
+.game .card .content .fetching {
+  width: 65px !important;
+  height: 65px !important;
+}
+
+.game .card .content .sip {
+  font-size: clamp(50px, 5.385vw, 70px);
+  padding: 0px 20px 20px 20px;
+  margin: auto 0 20px 0;
+}
+
+.game.dirty .card .content .sip,
+.game.dirty .card .content .fetching {
+  color: #ed6d6d;
+}
+
+.game.clean .card .content .sip,
+.game.clean .card .content .fetching {
+  color: #029a9e;
+}
+
+.game .next {
+  font-size: 24px !important;
+  margin-top: 20px !important;
+  padding: 10px 50px !important;
+  font-weight: normal;
+  transform: translate(0px, 0px) rotate(0deg);
+  transition: all 0.5s ease;
+}
+
+.game .next:hover {
+  transform: translate(5px, 5px) rotate(5deg);
 }

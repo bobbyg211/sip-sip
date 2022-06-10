@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { getQuestions } from "../controllers/database.js";
+import { getQuestion } from "../controllers/database.js";
 
 const router = Router();
 
-router.get("/questions", getQuestions);
+router.get("/question", getQuestion);
 
 export default router;
