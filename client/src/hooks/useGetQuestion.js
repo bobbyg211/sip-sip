@@ -8,7 +8,9 @@ export default function useGetQuestion(mode) {
     "question",
     async () => {
       const config = {
-        mode: mode,
+        params: {
+          mode: mode,
+        },
       };
 
       return await axios
