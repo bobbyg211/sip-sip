@@ -14,7 +14,7 @@ export default function Home() {
         src={logo}
         alt="Cocktail"
       ></img>
-      <h1 className="title">SipSip</h1>
+      <h1 className="title">SipSip!</h1>
       <div className="modes">
         <Button
           onMouseEnter={() => setClean(true)}

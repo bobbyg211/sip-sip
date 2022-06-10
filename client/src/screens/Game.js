@@ -14,7 +14,7 @@ export default function Game() {
     <Container className={`game ${mode ? "dirty" : "clean"}`}>
       <div className="company">
         <img className="logo" src={logo} alt="Cocktail"></img>
-        <h3 className="title">SipSip</h3>
+        <h3 className="title">SipSip!</h3>
       </div>
       <IconButton component={Link} className="home-arrow" aria-label="home" to="/">
         <ArrowRightAlt />
