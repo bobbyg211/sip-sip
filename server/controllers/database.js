@@ -17,10 +17,17 @@ const getQuestion = async (req, res) => {
       sql = `UPDATE sipsip.questions SET sipped = TRUE WHERE id = ${results[0].id}`;
       await sqlQueryProm(sql);
     } else {
-      sql = `
-        UPDATE sipsip.questions SET sipped = FALSE;
-        SELECT * FROM sipsip.questions WHERE sipped = FALSE ORDER BY RAND() LIMIT 1;
-      `;
+      if (mode) {
+        sql = `
+          UPDATE sipsip.questions SET sipped = FALSE;
+          SELECT * FROM sipsip.questions WHERE sipped = FALSE ORDER BY RAND() LIMIT 1;
+        `;
+      } else {
+        sql = `
+          UPDATE sipsip.questions SET sipped = FALSE WHERE dirty = FALSE;
+          SELECT * FROM sipsip.questions WHERE sipped = FALSE AND dirty = FALSE ORDER BY RAND() LIMIT 1;
+        `;
+      }
 
       const reset = await sqlQueryProm(sql);
       results = reset[1];
