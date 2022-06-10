@@ -94,6 +94,25 @@ p {
   transform: translate(30px, 10px) rotate(-5deg);
 }
 
+@media (max-width: 768px) {
+  .home .modes {
+    margin-top: 0px;
+  }
+
+  .home .modes .MuiButton-root {
+    font-size: 20px !important;
+    padding: 10px 35px !important;
+  }
+
+  .home .modes .MuiButton-root.clean {
+    transform: translate(-10px, 10px) rotate(5deg);
+  }
+
+  .home .modes .MuiButton-root.dirty {
+    transform: translate(10px, 10px) rotate(-5deg);
+  }
+}
+
 /* Game */
 
 .game .company {
@@ -161,12 +180,6 @@ p {
   margin-top: auto;
 }
 
-@media (max-width: 768px) {
-  .game .card .content .question {
-    padding: 20px 20px 0px 20px;
-  }
-}
-
 .game .card .content .fetching {
   margin-top: auto;
 }
@@ -203,4 +216,10 @@ p {
 
 .game .next:hover {
   transform: translate(5px, 5px) rotate(5deg);
+}
+
+@media (max-width: 768px) {
+  .game .card .content .question {
+    padding: 20px 20px 0px 20px;
+  }
 }
