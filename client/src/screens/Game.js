@@ -38,7 +38,7 @@ export default function Game() {
       >
         Next
       </Button>
-      <IconButton className="home-arrow" aria-label="home">
+      <IconButton component={Link} to="/" className="home-arrow" aria-label="home">
         <ArrowRightAlt /> Home
       </IconButton>
     </Container>
