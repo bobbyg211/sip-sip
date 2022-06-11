@@ -14,7 +14,7 @@ export default function Music() {
   };
 
   return (
-    <div className={`music ${open && "open"}`}>
+    <div className={`music ${open ? "open" : ""}`}>
       <iframe
         className="player"
         src="https://open.spotify.com/embed/playlist/0FO9ScXahULwovyxLDDiPQ?utm_source=generator&muted=1"
