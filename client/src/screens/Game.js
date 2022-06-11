@@ -12,14 +12,10 @@ export default function Game() {
 
   return (
     <Container className={`game ${mode ? "dirty" : "clean"}`}>
-      <div className="company">
+      <Link className="company" to="/">
         <img className="logo" src={logo} alt="Cocktail"></img>
         <h3 className="title">SipSip!</h3>
-      </div>
-      <IconButton component={Link} className="home-arrow" aria-label="home" to="/">
-        <ArrowRightAlt />
-      </IconButton>
-
+      </Link>
       <IconButton className="settings" aria-label="settings">
         <Settings />
       </IconButton>
@@ -42,6 +38,9 @@ export default function Game() {
       >
         Next
       </Button>
+      <IconButton className="home-arrow" aria-label="home">
+        <ArrowRightAlt /> Home
+      </IconButton>
     </Container>
   );
 }

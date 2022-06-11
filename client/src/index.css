@@ -120,6 +120,8 @@ p {
   align-items: center;
   position: absolute;
   top: 20px;
+  color: white;
+  text-decoration: none;
 }
 
 .game .company .logo {
@@ -134,15 +136,16 @@ p {
 
 .game .home-arrow {
   position: absolute;
-  top: 10px;
+  bottom: 10px;
   left: 10px;
   color: white;
-  transform: rotate(180deg);
+  font-size: 17px;
 }
 
 .game .home-arrow .MuiSvgIcon-root {
   width: 2em !important;
   height: 2em !important;
+  transform: rotate(180deg);
 }
 
 .game .settings {
@@ -222,4 +225,33 @@ p {
   .game .card .content .question {
     padding: 20px 20px 0px 20px;
   }
+}
+
+/* Music */
+
+.music {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.music.open {
+  width: 250px;
+}
+
+.music .player {
+  border-radius: 50px;
+  transition: all 0.2s ease;
+}
+
+.music.open .player {
+  border-radius: 12px;
+}
+
+.music .expand {
+  color: white;
 }
