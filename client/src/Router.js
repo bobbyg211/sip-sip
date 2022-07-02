@@ -8,7 +8,7 @@ import Error404 from "./system/Error404";
 const Router = () => {
   return (
     <div id="main">
-      <Music />
+      {/* <Music /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/game" element={<Game />} />
