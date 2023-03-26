@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useQueryClient, useQuery } from "react-query";
 
-export default function useGetQuestion(mode) {
+export default function useGetQuestion(id) {
   const queryClient = useQueryClient();
 
   return useQuery(
@@ -9,7 +9,7 @@ export default function useGetQuestion(mode) {
     async () => {
       const config = {
         params: {
-          mode: mode,
+          id: id,
         },
       };
 

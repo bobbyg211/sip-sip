@@ -17,7 +17,7 @@ p {
   margin-top: 0;
 }
 
-#main .MuiContainer-root {
+#main .wrapper {
   width: 100% !important;
   height: 100vh;
   display: flex !important;
@@ -49,12 +49,19 @@ p {
   height: 65px !important;
 }
 
-/* Home */
+/* Global */
 
-.home {
+.global {
   position: relative;
-  top: -50px;
 }
+
+.global .connection {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* Home */
 
 .home .logo {
   max-width: 200px;
@@ -67,12 +74,15 @@ p {
   font-size: 3em;
 }
 
-.home .logo.clean {
-  transform: translate(-30px, -10px) rotate(-10deg);
+.home .start-form {
+  display: flex;
+  align-items: flex-start;
 }
 
-.home .logo.dirty {
-  transform: translate(70px, -10px) rotate(10deg);
+.home .start-form .field {
+  background: white;
+  border-radius: 5px;
+  margin: 10px;
 }
 
 .home .modes {
@@ -86,14 +96,6 @@ p {
   font-weight: normal;
 }
 
-.home .modes .MuiButton-root.clean {
-  transform: translate(-30px, 10px) rotate(5deg);
-}
-
-.home .modes .MuiButton-root.dirty {
-  transform: translate(30px, 10px) rotate(-5deg);
-}
-
 @media (max-width: 768px) {
   .home .modes {
     margin-top: 0px;
@@ -102,14 +104,6 @@ p {
   .home .modes .MuiButton-root {
     font-size: 20px !important;
     padding: 10px 35px !important;
-  }
-
-  .home .modes .MuiButton-root.clean {
-    transform: translate(-10px, 10px) rotate(5deg);
-  }
-
-  .home .modes .MuiButton-root.dirty {
-    transform: translate(10px, 10px) rotate(-5deg);
   }
 }
 
@@ -198,14 +192,9 @@ p {
   margin: auto 0 20px 0;
 }
 
-.game.dirty .card .content .sip,
-.game.dirty .card .content .fetching {
+.game .card .content .sip,
+.game .card .content .fetching {
   color: #ed6d6d;
-}
-
-.game.clean .card .content .sip,
-.game.clean .card .content .fetching {
-  color: #029a9e;
 }
 
 .game .next {
@@ -217,42 +206,8 @@ p {
   transition: all 0.5s ease;
 }
 
-.game .next:hover {
-  transform: translate(5px, 5px) rotate(5deg);
-}
-
 @media (max-width: 768px) {
   .game .card .content .question {
     padding: 20px 20px 0px 20px;
   }
-}
-
-/* Music */
-
-.music {
-  position: absolute;
-  z-index: 99;
-  top: 20px;
-  left: 20px;
-  width: 80px;
-  display: flex;
-  align-items: center;
-  transition: all 0.2s ease;
-}
-
-.music.open {
-  width: 250px;
-}
-
-.music .player {
-  border-radius: 50px;
-  transition: all 0.2s ease;
-}
-
-.music.open .player {
-  border-radius: 12px;
-}
-
-.music .expand {
-  color: white;
 }
